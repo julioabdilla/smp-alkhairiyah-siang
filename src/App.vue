@@ -37,7 +37,7 @@
     <div class="mt-14 px-96 flex">
       <router-view></router-view>
       <div class="ml-auto flex flex-col text-left pl-12">
-        <div id="side">
+        <div class="side-widget">
           <div class="text-sm">
             <span class="font-semibold">Alamat:</span>
             <p>Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara</p>
@@ -58,6 +58,9 @@
             </a>
           </div>
         </div>
+        <div class="side-widget mt-6">
+          <calendar />
+        </div>
       </div>
     </div>
   </div>
@@ -67,11 +70,13 @@
 import * as moment from 'moment'
 import Carousel from './components/carousel/Carousel.vue'
 import GoogleMap from './components/googlemap/GoogleMap.vue'
+import Calendar from './components/calendar/Calendar.vue'
 
 export default {
   components: {
     GoogleMap,
     Carousel,
+    Calendar,
   },
   data() {
     return {
@@ -125,7 +130,7 @@ export default {
   }
 }
 
-#side {
+.side-widget {
   background-color: #fffad2;
   color: #5a5a5a;
   padding: 24px;
