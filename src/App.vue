@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="font-helvetica">
     <div id="banner" class="flex flex-col">
       <div id="top-bar" class="flex w-full mb-8 px-96 py-1">
         <div class="w-full text-left">
@@ -16,7 +16,7 @@
         <div class="flex flex-col ml-4 text-left">
           <a href="/" class="text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
           <a
-            href="https://maps.app.goo.gl/wdGxFXoiKyjLJEfVA"
+            href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
             target="_blank"
             class="text-sm font-light">
             Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara
@@ -52,7 +52,7 @@
           </div>
           <div class="mt-4">
             <a 
-              href="https://maps.app.goo.gl/wdGxFXoiKyjLJEfVA"
+              href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
               target="_blank">
               <google-map class="w-40"></google-map>
             </a>
