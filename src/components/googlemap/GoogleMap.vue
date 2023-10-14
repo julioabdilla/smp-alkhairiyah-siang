@@ -15,3 +15,9 @@ export default {
   name: 'GoogleMap',
 }
 </script>
+
+<style scoped>
+#map {
+  pointer-events: none;
+}
+</style>

@@ -28,8 +28,8 @@
         <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
         <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>
         <router-link to="/siswa" class="mx-3 nav-menu">Kesiswaan</router-link>
-        <router-link to="/galeri" class="mx-3 nav-menu">Galeri</router-link>
         <router-link to="/berita" class="mx-3 nav-menu">Berita</router-link>
+        <router-link to="/galeri" class="mx-3 nav-menu">Galeri</router-link>
         <router-link to="/kontak" class="mx-3 nav-menu">Kontak</router-link>
       </div>
       <carousel class="mt-[-1.2rem]"/>
@@ -51,7 +51,11 @@
             <p>info.smp.alkhairiyah.2@gmail.com</p>
           </div>
           <div class="mt-4">
-            <google-map class="w-40"></google-map>
+            <a 
+              href="https://maps.app.goo.gl/wdGxFXoiKyjLJEfVA"
+              target="_blank">
+              <google-map class="w-40"></google-map>
+            </a>
           </div>
         </div>
       </div>
