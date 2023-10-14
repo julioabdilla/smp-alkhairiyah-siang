@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+
+# Build files
+/dist/
+/.nuxt/
+/.ssr/
+
+# Log files and build results
+npm-debug.log
+yarn-error.log
+
+# Environment variables file (for .env.local or .env.*)
+.env
+.env.local
+.env.*.local
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Compiled output
+*.min.js
+
+# Backup files
+*.bak
+*.swp
+*~
+
+# Testing
+coverage/
