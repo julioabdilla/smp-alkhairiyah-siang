@@ -1,5 +1,5 @@
 <template>
-  <div class="about text-left">
+  <div class="gallery text-left w-full">
     <span class="text-2xl font-semibold">ANBK TAHUN AJARAN 2022-2023</span>
     <photo-grid class="pt-2" :photos="anbk" :large="true" />
     <div class="border-t border-grey-800 my-6"></div>

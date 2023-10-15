@@ -1,5 +1,5 @@
 <template>
-  <div class="about text-left">
+  <div class="news text-left w-full">
     <span class="text-2xl font-semibold">Berita</span>
     <paging class="pt-4"
       :current-page="currentPage"

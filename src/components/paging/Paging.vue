@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-auto">
-    <div class="paging flex justify-center space-x-2 text-sm">
+    <div class="paging flex space-x-2 text-sm">
       <button
         @click="changePage('prev')"
         :disabled="currentPage === 1"

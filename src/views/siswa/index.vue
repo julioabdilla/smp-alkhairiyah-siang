@@ -1,5 +1,5 @@
 <template>
-  <div class="about text-left">
+  <div class="student text-left w-fill">
     <span class="text-2xl font-semibold">Kesiswaan</span>
   </div>
 </template>

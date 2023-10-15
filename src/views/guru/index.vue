@@ -1,6 +1,7 @@
 <template>
-  <div class="about text-left">
-    <span class="text-2xl font-semibold">Guru</span>
+  <div id="staff" ref="scrollTarget" class="items-left text-left w-full">
+    <span class="text-2xl font-semibold">Guru & Staff</span>
+    <photo-grid class="pt-2" :photos="guru" />
     <paging class="pt-4"
       :current-page="currentPage"
       :total-pages="totalPages"
@@ -11,12 +12,22 @@
 
 <script>
 import { defineComponent } from 'vue'
+import PhotoGrid from '../../components/photogrid/PhotoGrid.vue'
 import Paging from '../../components/paging/Paging.vue'
+import staffData from '@/assets/datas/guru.json'
+
+const staffDataPage = JSON.parse(JSON.stringify(staffData)).map(data => {
+  return {
+    url: require(`@/assets/images/guru/${data}`),
+    title: data.replace(/\.[^/.]+$/, ""),
+  }
+})
 
 export default defineComponent({
   name: 'Guru',
   components: {
     Paging,
+    PhotoGrid,
   },
   mounted() {
     // This method will be executed when the component is mounted
@@ -24,42 +35,25 @@ export default defineComponent({
   },
   data() {
     return {
-      guru: [
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-        {
-          url: require('@/assets/images/profile-placeholder.jpeg'),
-          title: 'Nama 1',
-        },
-      ],
+      guru: staffDataPage,
       currentPage: 1,
-      totalPages: 1 // Set the total number of pages
+      totalPages: 1,
     };
   },
   methods: {
     initPage(){
-      this.totalPages = Math.ceil(this.guru.length / 9);
+      this.totalPages = Math.ceil(this.guru.length / 12)
+      this.guru = JSON.parse(JSON.stringify(staffDataPage)).slice(0, 12)
     },
     changePage(page) {
-      this.currentPage = page;
+      const targetElement = this.$refs.scrollTarget // Replace with your desired target tag or ID
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" })
+      }
+      this.currentPage = page
+      const startIndex = (page - 1) * 12
+      const endIndex = startIndex + 12
+      this.guru = JSON.parse(JSON.stringify(staffDataPage)).slice(startIndex, endIndex)
       // Fetch data for the new page
     }
   }

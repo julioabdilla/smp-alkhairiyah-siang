@@ -1,5 +1,5 @@
 <template>
-  <div class="about text-left">
+  <div class="contact text-left w-fill">
     <span class="text-2xl font-semibold">Alamat</span>
     <p class="text-sm text-justify">
       Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara.
