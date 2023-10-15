@@ -80,9 +80,6 @@ export default defineComponent({
           url: require('@/assets/images/gallery/lomba_17_agustus/IMG-20220815-WA0050.jpg'),
         },
         {
-          url: require('@/assets/images/gallery/lomba_17_agustus/IMG-20220816-WA0007.jpg'),
-        },
-        {
           url: require('@/assets/images/gallery/lomba_17_agustus/IMG-20220816-WA0008.jpg'),
         },
         {
