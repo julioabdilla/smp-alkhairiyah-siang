@@ -6,7 +6,7 @@
           <span class="text-s font-bold">Berita Terbaru:</span>
         </div>
         <div class="w-full text-right">
-          <span class="text-s">{{ currentTime }}</span>
+          <!-- <span class="text-s">{{ currentTime }}</span> -->
         </div>
       </div>
       <div class="flex items-center mx-96">
@@ -15,12 +15,16 @@
         </a>
         <div class="flex flex-col ml-4 text-left">
           <a href="/" class="text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
-          <a
-            href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
-            target="_blank"
-            class="text-sm font-light">
-            Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara
-          </a>
+            <a
+              href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
+              target="_blank">
+              <div class="flex items-center">
+                <map-pin-icon class="w-3 h-auto mr-1 mb-0.5" />
+                <span class="text-sm font-light">
+                  Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara
+                </span>
+              </div>
+            </a>
         </div>
       </div>
       <div class="nav mx-auto flex p-2 rounded-full mt-[-0.4rem] z-10 border border-white">
@@ -39,15 +43,24 @@
       <div class="ml-auto flex flex-col text-left pl-12">
         <div class="side-widget">
           <div class="text-sm">
-            <span class="font-semibold">Alamat:</span>
+            <div class="flex items-center">
+              <map-pin-icon class="w-3 h-auto mr-1 mb-0.5" />
+              <span class="font-semibold">Alamat:</span>
+            </div>
             <p>Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara</p>
           </div>
           <div class="text-sm mt-4">
-            <span class="font-semibold">Telp:</span>
+            <div class="flex items-center">
+              <phone-icon class="w-3 h-auto mr-1 mb-0.5" />
+              <span class="font-semibold">Telp:</span>
+            </div>
             <p>(021) 439-3162-9</p>
           </div>
           <div class="text-sm mt-4">
-            <span class="font-semibold">Email:</span>
+            <div class="flex items-center">
+              <envelope-icon class="w-3 h-auto mr-1 mb-0.5" />
+              <span class="font-semibold">Email:</span>
+            </div>
             <p>info.smp.alkhairiyah.2@gmail.com</p>
           </div>
           <div class="mt-4">
@@ -71,12 +84,17 @@ import * as moment from 'moment'
 import Carousel from './components/carousel/Carousel.vue'
 import GoogleMap from './components/googlemap/GoogleMap.vue'
 import Calendar from './components/calendar/Calendar.vue'
+import { MapPinIcon, PhoneIcon, EnvelopeIcon, HomeIcon } from '@heroicons/vue/24/solid';
 
 export default {
   components: {
     GoogleMap,
     Carousel,
     Calendar,
+    MapPinIcon,
+    PhoneIcon,
+    EnvelopeIcon,
+    HomeIcon,
   },
   data() {
     return {
