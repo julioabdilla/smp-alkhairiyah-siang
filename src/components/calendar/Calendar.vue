@@ -20,7 +20,7 @@
       <tbody>
         <tr v-for="week in calendar" :key="week[0].date.format('YYYY-MM-DD')">
           <td v-for="day in week" :key="day.date.format('YYYY-MM-DD')">
-            <span @mouseover="day.isHoliday ? calendarTooltip[day.date.format('YYYY-MM-DD')] = true : calendarTooltip[day.date.format('YYYY-MM-DD')] = false" @mouseleave="calendarTooltip[day.date.format('YYYY-MM-DD')] = false" :class="{'font-semibold': day.isThisMonth, 'font-light': !day.isThisMonth, 'text-red-500': day.isHoliday, 'cursor-pointer': day.isHoliday }">
+            <span @mouseover="day.isHoliday ? calendarTooltip[day.date.format('YYYY-MM-DD')] = true : calendarTooltip[day.date.format('YYYY-MM-DD')] = false" @mouseleave="calendarTooltip[day.date.format('YYYY-MM-DD')] = false" :class="{'font-semibold': day.isThisMonth, 'font-light': !day.isThisMonth, 'text-red-500': day.isHoliday, 'cursor-pointer': true }">
               {{ day ? day.date.format('D') : '' }}
             </span>
             <div v-if="calendarTooltip[day.date.format('YYYY-MM-DD')]" class="absolute bg-gray-200 text-sm text-red-500 px-3 py-1 rounded-sm -mt-8 ml-4">

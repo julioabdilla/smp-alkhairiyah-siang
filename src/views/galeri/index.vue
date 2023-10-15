@@ -12,6 +12,8 @@
     <span class="text-2xl font-semibold">MAULID TAHUN AJARAN 2022-2023</span>
     <photo-grid class="pt-2" :photos="maulid" :large="true" />
     <div class="border-t border-grey-800 my-6"></div>
+    <span class="text-2xl font-semibold">KUNJUNGAN MUSEUM REKOR MURI</span>
+    <photo-grid class="pt-2" :photos="muri" :large="true" />
   </div>
 </template>
 
@@ -108,6 +110,20 @@ export default defineComponent({
         },
         {
           url: require('@/assets/images/gallery/maulid/20221020_154439.jpg'),
+        },
+      ],
+      muri: [
+        {
+          url: require('@/assets/images/gallery/kunjungan_museum_muri/IMG-20230117-WA0008.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/kunjungan_museum_muri/IMG-20230117-WA0010.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/kunjungan_museum_muri/IMG-20230117-WA0012.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/kunjungan_museum_muri/IMG-20230117-WA0023.jpg'),
         },
       ]
     }
