@@ -1,6 +1,6 @@
 {
   "name": "smp-alkhairiyah",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "scripts": {
     "dev": "node service/commands/dev.js",
