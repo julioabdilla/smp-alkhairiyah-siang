@@ -31,7 +31,7 @@
         <router-link to="/" class="mx-3 nav-menu">Home</router-link>
         <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
         <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>
-        <router-link to="/siswa" class="mx-3 nav-menu">Kesiswaan</router-link>
+        <!-- <router-link to="/siswa" class="mx-3 nav-menu">Kesiswaan</router-link> -->
         <router-link to="/berita" class="mx-3 nav-menu">Berita</router-link>
         <router-link to="/galeri" class="mx-3 nav-menu">Galeri</router-link>
         <router-link to="/kontak" class="mx-3 nav-menu">Kontak</router-link>
