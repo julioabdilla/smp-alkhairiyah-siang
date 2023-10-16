@@ -20,7 +20,7 @@
               target="_blank">
               <div class="flex items-center">
                 <map-pin-icon class="w-3 h-auto mr-1 mb-0.5" />
-                <span class="text-sm font-light">
+                <span class="text-sm">
                   Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara
                 </span>
               </div>
