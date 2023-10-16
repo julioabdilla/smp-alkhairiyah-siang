@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="font-helvetica">
+  <div class="font-helvetica">
     <div id="banner" class="flex flex-col">
       <div id="top-bar" class="flex w-full mb-8 px-96 py-1">
         <div class="w-full text-left">
@@ -118,6 +118,10 @@
           </div>
       </div>
     </div>
+    <div class="footer-sub w-full h-8 mt-28">
+    </div>
+    <div class="footer w-full h-20">
+    </div>
   </div>
 </template>
 
@@ -171,7 +175,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  padding-bottom: 36px;
 }
 
 #banner {
@@ -205,5 +208,13 @@ export default {
   padding: 24px;
   width: 350px;
   border-radius: 8px;
+}
+
+.footer-sub {
+  background-color: #2aa721;
+}
+
+.footer {
+  background-color: #0a8801;
 }
 </style>
