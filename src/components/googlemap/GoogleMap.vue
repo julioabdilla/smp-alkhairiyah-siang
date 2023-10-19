@@ -1,8 +1,7 @@
 <template>
   <div id="map" class="w-full">
     <iframe
-      width="300"
-      height="300"
+      class="w-full aspect-w-1 aspect-h-1"
       frameborder="0"
       style="border: 0"
       allowfullscreen=""
