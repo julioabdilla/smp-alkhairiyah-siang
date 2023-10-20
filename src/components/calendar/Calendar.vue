@@ -7,7 +7,7 @@
     </div>
     <table class="w-full table-fixed">
       <tbody>
-        <tr class="text-lg sm:text-lg md:text-lg lg:text-xs xl:text-sm 2xl:text-base">
+        <tr class="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base">
           <td class="w-1/7 pb-1 font-semibold">Mn</td>
           <td class="w-1/7 pb-1 font-semibold">Sn</td>
           <td class="w-1/7 pb-1 font-semibold">Sl</td>
