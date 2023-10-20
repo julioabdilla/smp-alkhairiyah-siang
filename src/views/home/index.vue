@@ -2,7 +2,7 @@
   <div class="home text-left w-fill">
     <welcome />
     <div class="border-t border-grey-800 my-6"></div>
-    <a href="#/galeri">
+    <a href="/galeri">
       <div class="flex items-center">
         <photo-icon class="w-6 h-auto mr-2" />
         <span class="text-2xl font-semibold">Galeri »</span>
@@ -10,7 +10,7 @@
     </a>
     <photo-grid class="pt-2" :photos="gallery" :large="true" />
     <div class="border-t border-grey-800 my-6"></div>
-    <a href="#/guru">
+    <a href="/guru">
       <div class="flex items-center">
         <user-icon class="w-6 h-auto mr-1.5 mb-0.5" />
         <span class="text-2xl font-semibold">Guru & Staff »</span>

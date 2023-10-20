@@ -40,12 +40,12 @@
         <carousel class="mt-[-1.2rem]"/>
       </div>
     </div>
-    <div class="mb-10 md:mb:28 mt-4 md:mt-14 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
+    <div class="mb-10 md:mb:28 mt-4 md:mt-10 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
       <div class="w-full block md:grid grid-cols-12 gap-8">
-        <div class="col-span-8 xs:col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-9">
+        <div class="col-span-8 2xl:col-span-9">
           <router-view></router-view>
         </div>
-        <div class="hidden md:flex flex-col text-left col-span-4 xs:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3">
+        <div class="hidden md:flex flex-col text-left col-span-4 2xl:col-span-3">
           <div class="side-widget">
             <div class="text-sm">
               <div class="flex items-center">
