@@ -10,7 +10,7 @@
     <div v-for="(photo, index) in photos" :key="index" class="relative w-full h-auto bg-gray-200">
       <img :src="photo.url" alt="Photo" class="w-full h-full object-fill">
       <div class="absolute inset-x-0 bottom-0 px-2 py-1 bg-black bg-opacity-60 text-white text-center text-sm">
-        <p class="text-sm font-semibold">{{ photo.title }}</p>
+        <p class="font-semibold text-xs xs:text-xs md:text-xs lg:text-xs xl:text-sm">{{ photo.title }}</p>
       </div>
     </div>
     <a v-if="detailPage" :href="`#${detailPage}`" class="bg-gray-200">
