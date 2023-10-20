@@ -1,7 +1,7 @@
 <template>
   <div class="font-helvetica">
     <div id="banner" class="flex flex-col">
-      <div id="top-bar" class="flex w-full mb-8 py-1 px-40 sm:px-40 md:px-40 lg:px-40 xl:px-60 2xl:px-70">
+      <div id="top-bar" class="flex w-full mb-8 py-1 px-40 sm:px-40 md:px-40 lg:px-40 xl:px-60 2xl:px-80">
         <div class="w-full text-left">
           <span class="text-s font-bold">Berita Terbaru:</span>
         </div>
@@ -9,12 +9,12 @@
           <!-- <span class="text-s">{{ currentTime }}</span> -->
         </div>
       </div>
-      <div class="flex items-center mx-40 sm:mx-40 md:mx-40 lg:mx-40 xl:mx-60 2xl:px-70">
+      <div class="flex items-center mx-40 sm:mx-40 md:mx-40 lg:mx-40 xl:mx-60 2xl:mx-80">
         <a href="/">
-          <img class="w-28 aspect-w-1 aspect-h-1 blur" :src="require('@/assets/images/logo.png')" />
+          <img class="w-28 aspect-w-1 aspect-h-1 blur sm:w-15 md:w-20 lg:w-25 xl:w-28 2xl:w-28" :src="require('@/assets/images/logo.png')" />
         </a>
         <div class="flex flex-col ml-4 text-left">
-          <a href="/" class="text-xl sm:xl md:text-2xl lg:text-3xl xl:text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
+          <a href="/" class="text-2xl sm:xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
             <a
               href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
               target="_blank">
@@ -27,7 +27,7 @@
             </a>
         </div>
       </div>
-      <div class="nav mx-auto flex p-2 rounded-full mt-[-0.4rem] z-10 border border-white text-sm xs:text-xs md:text-sm lg:text-sm xl:text-base">
+      <div class="nav mx-auto flex p-2 rounded-full mt-[-0.4rem] z-10 border border-white text-sm xs:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
         <router-link to="/" class="mx-3 nav-menu">Home</router-link>
         <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
         <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>
@@ -38,12 +38,12 @@
       </div>
       <carousel class="mt-[-1.2rem]"/>
     </div>
-    <div class="mt-14 px-40 sm:px-40 md:px-40 lg:px-40 xl:px-60 2xl:px-70">
+    <div class="mt-14 px-40 sm:px-40 md:px-40 lg:px-40 xl:px-60 2xl:px-80">
       <div class="w-full grid grid-cols-12 gap-8">
-        <div class="col-span-8">
+        <div class="col-span-8 xs:col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-9">
           <router-view></router-view>
         </div>
-        <div class="flex flex-col text-left col-span-4">
+        <div class="flex flex-col text-left col-span-4 xs:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3">
           <div class="side-widget">
             <div class="text-sm">
               <div class="flex items-center">

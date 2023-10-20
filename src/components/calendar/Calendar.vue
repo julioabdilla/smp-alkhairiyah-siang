@@ -1,13 +1,13 @@
 <template>
   <div class="text-sm text-center">
-    <div class="flex items-center mb-1">
+    <div class="flex items-center mb-">
       <!-- <button @click="goToPreviousMonth">«</button> -->
       <calendar-icon class="w-7 h-auto mr-1.5 mb-1" /><span class="font-semibold text-base xs:text-base md:text-base lg:text-base xl:text-base 2xl:text-lg">{{ monthYear }}</span>
       <!-- <button @click="goToNextMonth">»</button> -->
     </div>
     <table class="w-full table-fixed">
       <tbody>
-        <tr class="text-lg sm:text-lg md:text-lg lg:text-xs xl:text-base 2xl:text-xl">
+        <tr class="text-lg sm:text-lg md:text-lg lg:text-xs xl:text-sm 2xl:text-base">
           <td class="w-1/7 pb-1 font-semibold">Mn</td>
           <td class="w-1/7 pb-1 font-semibold">Sn</td>
           <td class="w-1/7 pb-1 font-semibold">Sl</td>
