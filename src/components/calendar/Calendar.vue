@@ -1,13 +1,13 @@
 <template>
   <div class="text-sm text-center">
-    <div class="flex items-center mb-">
+    <div class="flex items-center mb-1">
       <!-- <button @click="goToPreviousMonth">«</button> -->
       <calendar-icon class="w-7 h-auto mr-1.5 mb-1" /><span class="font-semibold text-base xs:text-base md:text-base lg:text-base xl:text-base 2xl:text-lg">{{ monthYear }}</span>
       <!-- <button @click="goToNextMonth">»</button> -->
     </div>
     <table class="w-full table-fixed">
       <tbody>
-        <tr class="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base">
+        <tr class="text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-sm">
           <td class="w-1/7 pb-1 font-semibold">Mn</td>
           <td class="w-1/7 pb-1 font-semibold">Sn</td>
           <td class="w-1/7 pb-1 font-semibold">Sl</td>
@@ -17,11 +17,11 @@
           <td class="w-1/7 pb-1 font-semibold">Sb</td>
         </tr>
         <tr v-for="week in calendar" :key="week[0].date.format('YYYY-MM-DD')">
-          <td v-for="day in week" :key="day.date.format('YYYY-MM-DD')" class="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base">
+          <td v-for="day in week" :key="day.date.format('YYYY-MM-DD')" class="text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-sm">
             <span @mouseover="day.isHoliday ? calendarTooltip[day.date.format('YYYY-MM-DD')] = true : calendarTooltip[day.date.format('YYYY-MM-DD')] = false" @mouseleave="calendarTooltip[day.date.format('YYYY-MM-DD')] = false" :class="{'font-semibold': day.isThisMonth, 'font-normal': !day.isThisMonth, 'text-red-500': day.isHoliday, 'cursor-pointer': true, 'today': day.isToday && !day.isHoliday, 'today-holiday': day.isToday && day.isHoliday }">
               {{ day ? day.date.format('D') : '' }}
             </span>
-            <div v-if="calendarTooltip[day.date.format('YYYY-MM-DD')]" class="absolute bg-gray-200 text-red-500 px-3 py-1 rounded-sm -mt-8 ml-4 text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base">
+            <div v-if="calendarTooltip[day.date.format('YYYY-MM-DD')]" class="absolute bg-gray-200 text-red-500 px-3 py-1 rounded-sm -mt-8 ml-4 text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-sm">
               {{ day.holidayName }}
             </div>
           </td>

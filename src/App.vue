@@ -1,7 +1,7 @@
 <template>
   <div class="font-helvetica">
     <div id="banner" class="flex flex-col">
-      <div id="top-bar" class="hidden sm:flex w-full py-1 px-4 sm:px-20 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
+      <div id="top-bar" class="hidden md:flex w-full py-1 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
         <div class="w-full text-left">
           <span class="text-s font-bold">Berita Terbaru:</span>
         </div>
@@ -9,26 +9,25 @@
           <!-- <span class="text-s">{{ currentTime }}</span> -->
         </div>
       </div>
-      <div class="flex items-center mt-2 sm:mt-8 mx-4 sm:mx-30 md:mx-20 lg:mx-36 xl:mx-60 2xl:mx-80">
+      <div class="flex items-center mt-2 md:mt-8 mx-4 md:mx-20 lg:mx-36 xl:mx-60 2xl:mx-80">
         <a href="/">
-          <img class="w-20 aspect-w-1 aspect-h-1 blur sm:w-15 md:w-20 lg:w-25 xl:w-25 2xl:w-28" :src="require('@/assets/images/logo.png')" />
+          <img class="w-20 aspect-w-1 aspect-h-1 blur md:w-20 lg:w-25 xl:w-25 2xl:w-28" :src="require('@/assets/images/logo.png')" />
         </a>
         <div class="flex flex-col ml-4 text-left">
-          <a href="/" class="text-2xl sm:xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
+          <a href="/" class="text-2xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-3xl font-medium">SMP Al-Khairiyah 2 Siang</a>
             <a
               href="https://maps.app.goo.gl/WSPAEugo8hLoq9Tz8"
-              target="_blank"
-              class="hidden sm:block">
+              target="_blank">
               <div class="flex items-center">
-                <map-pin-icon class="w-3 h-auto mr-1 mb-0.5" />
-                <span class="text-sm">
+                <map-pin-icon class="hidden md:block w-3 h-auto mr-1 mb-0.5" />
+                <span class="text-xs md:text-sm">
                   Jl. Mindi Raya No. 2, Lagoa, Kec. Koja, Kota Jakarta Utara
                 </span>
               </div>
             </a>
         </div>
       </div>
-      <div class="grid grid-cols-6 sm:flex nav mx-none sm:mx-auto p-2 rounded-none sm:rounded-full mt-2 sm:mt-[-0.4rem] z-0 sm:z-10 border border-white text-xs xs:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
+      <div class="grid grid-cols-6 md:flex nav mx-none md:mx-auto p-2 rounded-none md:rounded-full mt-2 md:mt-[-0.4rem] z-0 md:z-10 border border-white text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
         <router-link to="/" class="mx-3 nav-menu">Home</router-link>
         <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
         <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>
@@ -37,16 +36,16 @@
         <router-link to="/galeri" class="mx-3 nav-menu">Galeri</router-link>
         <router-link to="/kontak" class="mx-3 nav-menu">Kontak</router-link>
       </div>
-      <div class="hidden sm:block">
+      <div class="hidden md:block">
         <carousel class="mt-[-1.2rem]"/>
       </div>
     </div>
-    <div class="mb-10 sm:mb:28 mt-4 sm:mt-14 px-4 sm:px-20 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
-      <div class="w-full block sm:grid grid-cols-12 gap-8">
+    <div class="mb-10 md:mb:28 mt-4 md:mt-14 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
+      <div class="w-full block md:grid grid-cols-12 gap-8">
         <div class="col-span-8 xs:col-span-8 md:col-span-8 lg:col-span-8 xl:col-span-8 2xl:col-span-9">
           <router-view></router-view>
         </div>
-        <div class="hidden sm:flex flex-col text-left col-span-4 xs:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3">
+        <div class="hidden md:flex flex-col text-left col-span-4 xs:col-span-4 md:col-span-4 lg:col-span-4 xl:col-span-4 2xl:col-span-3">
           <div class="side-widget">
             <div class="text-sm">
               <div class="flex items-center">
@@ -83,10 +82,10 @@
         </div>
       </div>
     </div>
-    <div class="hidden sm:block footer-sub w-full h-8 mt-28">
+    <div class="hidden md:block footer-sub w-full h-8 mt-28">
     </div>
-    <div class="footer w-full h-20 items-center text-center text-xs sm:text-sm pt-3 sm:pt-4">
-      <div class="flex flex-col items-center text-center mb-1 sm:mb-2">
+    <div class="footer w-full h-20 items-center text-center text-xs md:text-sm pt-3 md:pt-4">
+      <div class="flex flex-col items-center text-center mb-1 md:mb-2">
         <div class="flex">
           <a href="https://instagram.com/smpaka2" target="_blank" class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="16px" height="16px" class="mr-1">
@@ -108,22 +107,22 @@
             </svg>
             smpaka2
           </a>
-          <pre class="hidden sm:block"> | </pre>
-          <a href="https://youtube.com/@smpal-khairiyah2173" target="_blank" class="hidden sm:flex items-center">
+          <pre class="hidden md:block"> | </pre>
+          <a href="https://youtube.com/@smpal-khairiyah2173" target="_blank" class="hidden md:flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="16px" height="16px" class="mr-1">
               <path fill="#ededed" d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"/>
             </svg>
             SMP Al-Khairiyah 2
           </a>
           <pre> | </pre>
-          <a href="https://www.facebook.com/smpaka2" target="_blank" class="hidden sm:flex items-center">
+          <a href="https://www.facebook.com/smpaka2" target="_blank" class="hidden md:flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="16px" height="16px" class="mr-1">
               <path fill="#ededed" d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h10v-9h-3v-3h3v-1.611C16,9.339,17.486,8,20.021,8 c1.214,0,1.856,0.09,2.16,0.131V11h-1.729C19.376,11,19,11.568,19,12.718V14h3.154l-0.428,3H19v9h5c1.105,0,2-0.895,2-2V6 C26,4.895,25.104,4,24,4z"/>
             </svg>
             SMP Al-Khairiyah 2
           </a>
         </div>
-        <div class="flex sm:hidden mt-1">
+        <div class="flex md:hidden mt-1">
           <a href="https://youtube.com/@smpal-khairiyah2173" target="_blank" class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="16px" height="16px" class="mr-1">
               <path fill="#ededed" d="M 15 4 C 10.814 4 5.3808594 5.0488281 5.3808594 5.0488281 L 5.3671875 5.0644531 C 3.4606632 5.3693645 2 7.0076245 2 9 L 2 15 L 2 15.001953 L 2 21 L 2 21.001953 A 4 4 0 0 0 5.3769531 24.945312 L 5.3808594 24.951172 C 5.3808594 24.951172 10.814 26.001953 15 26.001953 C 19.186 26.001953 24.619141 24.951172 24.619141 24.951172 L 24.621094 24.949219 A 4 4 0 0 0 28 21.001953 L 28 21 L 28 15.001953 L 28 15 L 28 9 A 4 4 0 0 0 24.623047 5.0546875 L 24.619141 5.0488281 C 24.619141 5.0488281 19.186 4 15 4 z M 12 10.398438 L 20 15 L 12 19.601562 L 12 10.398438 z"/>

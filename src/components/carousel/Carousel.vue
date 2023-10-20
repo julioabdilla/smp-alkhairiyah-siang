@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel w-full px-40 sm:px-40 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
+  <div class="carousel w-full px-40 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
     <!-- <button @click="prevImage" class="carousel-control prev">Previous</button> -->
     <div class="carousel-content">
       <img :src="require(`@/assets/images/banner/${images[currentImage]}`)" :alt="currentImage" class="w-full h-auto object-cover" />
