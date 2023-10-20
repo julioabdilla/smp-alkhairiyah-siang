@@ -1,11 +1,17 @@
-// optional: allow environment to specify port
 const port = process.env.PORT || 8080
 
-// wire up the module
 const express = require('express') 
-// create server instance
+const path = require('path');
+const helmet = require('helmet');
+const compress = require('compression');
+
 const app = express() 
-// bind the request to an absolute path or relative to the CWD
-app.use(express.static('dist'))
-// start the server
+app.use(compress());
+app.use(helmet());
+app.use(express.static(path.join(__dirname, 'dist'), { maxAge: 0 }));
+
+app.get('*', function (request, response) {
+  response.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`))
