@@ -3,5 +3,5 @@
 @import 'tailwindcss/utilities';
 
 .blur {
-  filter: blur(0.3px); /* Adjust the blur radius as needed */
+  filter: blur(0.1px); /* Adjust the blur radius as needed */
 }
