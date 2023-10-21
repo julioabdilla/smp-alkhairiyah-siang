@@ -1,7 +1,7 @@
 <template>
   <div v-if="large" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
     <div v-for="(photo, index) in photos" :key="index" class="flex bg-gray-300 items-center">
-      <img :src="photo.url" @click="openImage(photo.url)" alt="Photo" class="object-cover w-full h-full mx-auto cursor-pointer">
+      <img :src="photo.url" @click="openImage(photo.url)" alt="Photo" class="object-cover w-full aspect-video mx-auto cursor-pointer">
     </div>
     <div v-if="selectedImage && detailPage" @click="closeImage" class="fixed top-0 left-0 bg-black bg-opacity-80 w-full h-full flex items-center justify-center">
       <div>
