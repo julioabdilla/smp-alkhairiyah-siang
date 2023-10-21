@@ -1,6 +1,6 @@
 {
   "name": "smp-alkhairiyah",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "scripts": {
     "dev": "node service/commands/dev.js",
@@ -21,7 +21,6 @@
     "moment": "^2.29.4",
     "path": "^0.12.7",
     "pinia": "^2.0.28",
-    "unplugin-icons": "^0.17.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
     "vue3-google-maps": "^0.0.1"

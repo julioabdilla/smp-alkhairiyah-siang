@@ -27,7 +27,7 @@
             </a>
         </div>
       </div>
-      <div class="mb-auto grid grid-cols-6 md:flex nav mx-none md:mx-auto p-2 rounded-none md:rounded-full mt-2 md:mt-[-0.3rem] lg:mt-[-0.3rem] xl:mt-[-0.3rem] 2xl:mt-[-0.4rem] z-0 md:z-10 border-none md:border border-white text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
+      <div class="mb-auto grid grid-cols-6 md:flex nav mx-none md:mx-auto p-2 rounded-none md:rounded-full mt-2 md:mt-[-0.3rem] lg:mt-[-0.3rem] xl:mt-[-0.3rem] 2xl:mt-[-0.4rem] z-10 md:z-1 border-none md:border border-white text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
         <router-link to="/" class="mx-3 nav-menu">Home</router-link>
         <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
         <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>

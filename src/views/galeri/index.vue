@@ -1,19 +1,19 @@
 <template>
   <div class="gallery text-left w-full">
     <span class="text-2xl font-semibold">ANBK TAHUN AJARAN 2022-2023</span>
-    <photo-grid class="pt-2" :photos="anbk" :large="true" />
+    <photo-grid class="pt-2" :photos="anbk" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
     <span class="text-2xl font-semibold">HARI GURU TAHUN AJARAN 2022-2023</span>
-    <photo-grid class="pt-2" :photos="hari_guru" :large="true" />
+    <photo-grid class="pt-2" :photos="hari_guru" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
     <span class="text-2xl font-semibold">LOMBA 17 AGUSTUS 2023</span>
-    <photo-grid class="pt-2" :photos="lomba" :large="true" />
+    <photo-grid class="pt-2" :photos="lomba" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
     <span class="text-2xl font-semibold">MAULID TAHUN AJARAN 2022-2023</span>
-    <photo-grid class="pt-2" :photos="maulid" :large="true" />
+    <photo-grid class="pt-2" :photos="maulid" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
     <span class="text-2xl font-semibold">KUNJUNGAN MUSEUM REKOR MURI</span>
-    <photo-grid class="pt-2" :photos="muri" :large="true" />
+    <photo-grid class="pt-2" :photos="muri" :large="true" :detailPage="true" />
   </div>
 </template>
 

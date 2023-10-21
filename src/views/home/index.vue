@@ -8,7 +8,7 @@
         <span class="text-2xl font-semibold">Galeri »</span>
       </div>
     </a>
-    <photo-grid class="pt-2" :photos="gallery" :large="true" />
+    <photo-grid class="pt-2" :photos="gallery" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
     <a href="/guru">
       <div class="flex items-center">
