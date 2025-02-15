@@ -1,5 +1,17 @@
 <template>
   <div class="gallery text-left w-full">
+    <span class="text-2xl font-semibold">HARI GURU TAHUN AJARAN 2023-2024</span>
+    <photo-grid class="pt-2" :photos="hari_guru_2024" :large="true" :detailPage="true" />
+    <div class="border-t border-grey-800 my-6"></div>
+    <span class="text-2xl font-semibold">APEL & PELANTIKAN OSIS</span>
+    <photo-grid class="pt-2" :photos="apel_pelantikan_osis" :large="true" :detailPage="true" />
+    <div class="border-t border-grey-800 my-6"></div>
+    <span class="text-2xl font-semibold">HARI SANTRI</span>
+    <photo-grid class="pt-2" :photos="hari_santri" :large="true" :detailPage="true" />
+    <div class="border-t border-grey-800 my-6"></div>
+    <span class="text-2xl font-semibold">JUMAT BERKAH</span>
+    <photo-grid class="pt-2" :photos="jumat_berkah" :large="true" :detailPage="true" />
+    <div class="border-t border-grey-800 my-6"></div>
     <span class="text-2xl font-semibold">ANBK TAHUN AJARAN 2022-2023</span>
     <photo-grid class="pt-2" :photos="anbk" :large="true" :detailPage="true" />
     <div class="border-t border-grey-800 my-6"></div>
@@ -26,18 +38,80 @@ export default defineComponent({
   components: { PhotoGrid },
   data() {
     return {
-      anbk: [
+      hari_santri: [
         {
-          url: require('@/assets/images/gallery/anbk/IMG-20220919-WA0052.jpg'),
+          url: require('@/assets/images/gallery/hari_santri/1.jpg'),
         },
+        {
+          url: require('@/assets/images/gallery/hari_santri/2.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_santri/3.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_santri/4.jpg'),
+        },
+      ],
+      apel_pelantikan_osis: [
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/1.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/2.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/3.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/4.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/5.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/6.jpg'),
+        },
+      ],
+      hari_guru_2024: [
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/1.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/2.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/3.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/4.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/5.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/hari_guru_2024/6.jpg'),
+        },
+      ],
+      jumat_berkah: [
+        {
+          url: require('@/assets/images/gallery/jumat_berkah/1.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/jumat_berkah/2.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/jumat_berkah/3.jpg'),
+        },
+        {
+          url: require('@/assets/images/gallery/jumat_berkah/4.jpg'),
+        },
+      ],
+      anbk: [
         {
           url: require('@/assets/images/gallery/anbk/IMG-20220920-WA0011.jpg'),
         },
         {
           url: require('@/assets/images/gallery/anbk/IMG-20220920-WA0014.jpg'),
-        },
-        {
-          url: require('@/assets/images/gallery/anbk/IMG-20220920-WA0024.jpg'),
         },
       ],
       hari_guru: [
