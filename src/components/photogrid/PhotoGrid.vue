@@ -1,7 +1,7 @@
 <template>
   <div v-if="large" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
     <div v-for="(photo, index) in photos" :key="index" class="flex bg-gray-300 items-center">
-      <Spinner v-if="loading" />
+      <spinner v-if="loading" />
       <img 
         v-show="!loading"
         :src="photo.url" 
@@ -38,7 +38,7 @@ import Spinner from '@/components/spinner/Spinner.vue';
 
 export default defineComponent({
   name: 'PhotoGrid',
-  components: [Spinner],
+  components: { Spinner },
   props: ['photos', 'detailPage', 'large'],
   data() {
     return {
