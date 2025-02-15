@@ -24,7 +24,7 @@ const staffDataPage = JSON.parse(JSON.stringify(staffData)).map(data => {
 })
 
 export default defineComponent({
-  name: 'Guru',
+  name: 'Staff',
   components: {
     Paging,
     PhotoGrid,

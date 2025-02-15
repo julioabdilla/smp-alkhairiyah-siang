@@ -1,7 +1,15 @@
 <template>
-  <div v-if="large" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-4">
+  <div v-if="large" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-2 gap-4">
     <div v-for="(photo, index) in photos" :key="index" class="flex bg-gray-300 items-center">
-      <img :src="photo.url" @click="openImage(photo.url)" alt="Photo" class="object-cover w-full aspect-video mx-auto cursor-pointer">
+      <Spinner v-if="loading" />
+      <img 
+        v-show="!loading"
+        :src="photo.url" 
+        @load="handleImageLoad"
+        @error="handleImageError"
+        @click="openImage(photo.url)" 
+        alt="Photo" 
+        class="object-cover w-full aspect-video mx-auto cursor-pointer">
     </div>
     <div v-if="selectedImage && detailPage" @click="closeImage" class="z-20 fixed top-0 left-0 bg-black bg-opacity-80 w-full h-full flex items-center justify-center">
       <div>
@@ -26,13 +34,16 @@
 
 <script>
 import { defineComponent, h } from 'vue'
+import Spinner from '@/components/spinner/Spinner.vue';
 
 export default defineComponent({
   name: 'PhotoGrid',
+  components: [Spinner],
   props: ['photos', 'detailPage', 'large'],
   data() {
     return {
       selectedImage: null,
+      loading: false
     }
   },
   created() {
@@ -42,6 +53,12 @@ export default defineComponent({
     document.removeEventListener('keydown', this.handleEscKey);
   },
   methods: {
+    handleImageLoad() {
+      this.loading = false;
+    },
+    handleImageError() {
+      this.loading = false;
+    },
     handleEscKey(event) {
       if (event.key === 'Escape' || event.key === 'Esc' || event.key === 'Backspace') {
         this.closeImage();

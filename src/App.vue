@@ -1,4 +1,5 @@
 <template>
+  <loading :loading="loadingStore.loading" />
   <div class="font-helvetica min-h-screen">
     <div id="banner" class="flex flex-col">
       <div id="top-bar" class="hidden md:flex w-full py-1 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
@@ -29,12 +30,12 @@
       </div>
       <div class="mb-auto grid grid-cols-6 md:flex nav mx-none md:mx-auto p-2 rounded-none md:rounded-full mt-2 md:mt-[-0.3rem] lg:mt-[-0.3rem] xl:mt-[-0.3rem] 2xl:mt-[-0.4rem] md:z-10 border-none md:border border-white text-sm md:text-sm lg:text-sm xl:text-sm 2xl:text-base">
         <router-link to="/" class="mx-3 nav-menu">Home</router-link>
-        <router-link to="/profil" class="mx-3 nav-menu">Profil</router-link>
-        <router-link to="/guru" class="mx-3 nav-menu">Guru</router-link>
+        <router-link to="/profile" class="mx-3 nav-menu">Profil</router-link>
+        <router-link to="/staff" class="mx-3 nav-menu">Guru</router-link>
         <!-- <router-link to="/siswa" class="mx-3 nav-menu">Kesiswaan</router-link> -->
-        <router-link to="/berita" class="mx-3 nav-menu">Berita</router-link>
-        <router-link to="/galeri" class="mx-3 nav-menu">Galeri</router-link>
-        <router-link to="/kontak" class="mx-3 nav-menu">Kontak</router-link>
+        <router-link to="/article" class="mx-3 nav-menu">Berita</router-link>
+        <router-link to="/gallery" class="mx-3 nav-menu">Galeri</router-link>
+        <router-link to="/contact" class="mx-3 nav-menu">Kontak</router-link>
       </div>
       <div class="hidden md:block">
         <carousel class="mt-[-1.2rem]"/>
@@ -147,6 +148,8 @@
 
 <script>
 import * as moment from 'moment'
+import { useLoadingStore } from './stores/loading'
+import Loading from './components/loading/Loading.vue'
 import Carousel from './components/carousel/Carousel.vue'
 import GoogleMap from './components/googlemap/GoogleMap.vue'
 import Calendar from './components/calendar/Calendar.vue'
@@ -158,6 +161,7 @@ import YoutubeIcon from '@/assets/images/icons8-youtube.svg'
 
 export default {
   components: {
+    Loading,
     GoogleMap,
     Carousel,
     Calendar,
@@ -170,8 +174,13 @@ export default {
     TitkokIcon,
     YoutubeIcon,
   },
+  setup() {
+    const loadingStore = useLoadingStore();
+    return { loadingStore };
+  },
   data() {
     return {
+      loading: true,
       currentTime: moment().locale('id').format('dddd, DD MMMM YYYY HH:mm:ss'),
     }
   },

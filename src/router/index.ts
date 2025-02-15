@@ -7,34 +7,43 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "home" */ '../views/home/index.vue'),
   },
   {
-    path: '/profil',
-    name: 'Profil',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/profil/index.vue'),
+    path: '/profile',
+    name: 'Profile',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/profile/index.vue'),
   },
   {
-    path: '/guru',
-    name: 'Guru',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/guru/index.vue'),
+    path: '/staff',
+    name: 'Staff',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/staff/index.vue'),
+  },
+  // {
+  //   path: '/siswa',
+  //   name: 'Kesiswaan',
+  //   component: () => import(/* webpackChunkName: "profile" */ '../views/siswa/index.vue'),
+  // },
+  {
+    path: '/gallery',
+    name: 'Gallery',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/gallery/index.vue'),
   },
   {
-    path: '/siswa',
-    name: 'Kesiswaan',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/siswa/index.vue'),
+    path: '/gallery/:galleryId',
+    name: 'GalleryDetail',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/gallery_detail/index.vue'),
+    props: route => ({
+      galleryId: route.params.galleryId,
+      title: route.query.title
+    }),
   },
   {
-    path: '/galeri',
-    name: 'Galeri',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/galeri/index.vue'),
+    path: '/article',
+    name: 'Article',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/article/index.vue'),
   },
   {
-    path: '/berita',
-    name: 'Berita',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/berita/index.vue'),
-  },
-  {
-    path: '/kontak',
-    name: 'Kontak',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/kontak/index.vue'),
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "profile" */ '../views/contact/index.vue'),
   },
 ]
 

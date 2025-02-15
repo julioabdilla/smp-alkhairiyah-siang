@@ -14,7 +14,7 @@ import { defineComponent } from 'vue'
 import Paging from '../../components/paging/Paging.vue'
 
 export default defineComponent({
-  name: 'Berita',
+  name: 'Article',
   components: {
     Paging,
   },
