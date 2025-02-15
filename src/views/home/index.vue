@@ -42,7 +42,7 @@ import PhotoGrid from '../../components/photogrid/PhotoGrid.vue'
 import { PhotoIcon, UserIcon, LinkIcon, DocumentIcon } from '@heroicons/vue/24/solid'
 import staffData from '@/assets/datas/guru.json'
 
-const staffDataHome = JSON.parse(JSON.stringify(staffData)).slice(0, 6).map(data => {
+const staffDataHome = JSON.parse(JSON.stringify(staffData)).slice(0, 4).map(data => {
   return {
     url: require(`@/assets/images/guru/${data}`),
     title: data.replace(/\.[^/.]+$/, ""),
@@ -55,16 +55,13 @@ export default defineComponent({
     return {
       gallery: [
         {
-          url: require('@/assets/images/gallery/anbk/IMG-20220920-WA0011.jpg'),
+          url: require('@/assets/images/gallery/hari_guru_2024/6.jpg'),
         },
         {
-          url: require('@/assets/images/gallery/hari_guru/20221125_135401.jpg'),
+          url: require('@/assets/images/gallery/apel_pelantikan_osis/2.jpg'),
         },
         {
           url: require('@/assets/images/gallery/kunjungan_dpd/20221103_125108.jpg'),
-        },
-        {
-          url: require('@/assets/images/gallery/kunjungan_museum_muri/IMG-20230117-WA0008.jpg'),
         },
       ],
       guru: staffDataHome,
