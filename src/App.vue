@@ -3,11 +3,11 @@
     <div id="banner" class="flex flex-col">
       <div id="top-bar" class="hidden md:flex w-full py-1 px-4 md:px-20 lg:px-36 xl:px-60 2xl:px-80">
         <div class="w-full text-left">
-          <span class="text-s font-bold">Berita Terbaru:</span>
+          <span class="text-s font-bold subtext">Berita Terbaru: </span><span>Penerimaan peserta didik baru tahun ajaran 2025 telah dibuka...</span> <span class="subtext"><a href="/berita">lihat selengkapnya.</a></span>
         </div>
-        <div class="w-full text-right">
+        <!-- <div class="w-full text-right"> -->
           <!-- <span class="text-s">{{ currentTime }}</span> -->
-        </div>
+        <!-- </div> -->
       </div>
       <div class="flex items-center mt-2 md:mt-8 mx-4 md:mx-20 lg:mx-36 xl:mx-60 2xl:mx-80 md:h-20 lg:h-25 xl:h-25 2xl:h-28">
         <a href="/">
@@ -139,7 +139,7 @@
             </a>
           </div>
         </div>
-        <span>© 2023 SMP Al-Khairiyah 2 Siang</span>
+        <span>© 2024-2025 SMP Al-Khairiyah 2 Siang</span>
       </div>
     </div>
   </div>
@@ -218,6 +218,9 @@ export default {
   background-color: #0a8801;
   span {
     color: #ededed;
+    &.subtext {
+      color: #f9fd02;
+    }
   }
 }
 
