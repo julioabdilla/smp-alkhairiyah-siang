@@ -4,32 +4,32 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/home/index.vue'),
+    component: () => import('../views/home/index.vue'),
   },
   {
     path: '/profile',
     name: 'Profile',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/profile/index.vue'),
+    component: () => import('../views/profile/index.vue'),
   },
   {
     path: '/staff',
     name: 'Staff',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/staff/index.vue'),
+    component: () => import('../views/staff/index.vue'),
   },
   // {
   //   path: '/siswa',
   //   name: 'Kesiswaan',
-  //   component: () => import(/* webpackChunkName: "profile" */ '../views/siswa/index.vue'),
+  //   component: () => import('../views/siswa/index.vue'),
   // },
   {
     path: '/gallery',
     name: 'Gallery',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/gallery/index.vue'),
+    component: () => import('../views/gallery/index.vue'),
   },
   {
     path: '/gallery/:galleryId',
     name: 'GalleryDetail',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/gallery_detail/index.vue'),
+    component: () => import('../views/gallery_detail/index.vue'),
     props: route => ({
       galleryId: route.params.galleryId,
       title: route.query.title
@@ -38,12 +38,21 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/article',
     name: 'Article',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/article/index.vue'),
+    component: () => import('../views/article/index.vue'),
+  },
+  {
+    path: '/article/:articleId',
+    name: 'ArticleDetail',
+    component: () => import('../views/article_detail/index.vue'),
+    props: route => ({
+      articleId: route.params.articleId,
+      title: route.query.title
+    }),
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "profile" */ '../views/contact/index.vue'),
+    component: () => import('../views/contact/index.vue'),
   },
 ]
 

@@ -1742,6 +1742,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/html-truncate@npm:^1":
+  version: 1.2.4
+  resolution: "@types/html-truncate@npm:1.2.4"
+  checksum: 10c0/6e2cd98040aba3711738de7d7fe13875e1525d5f7e58b5707611bc9fbc64d453ff01af87a84b8a65af3a60f33da1389c25e4489e2e4addf46334c6c09b57e926
+  languageName: node
+  linkType: hard
+
 "@types/http-errors@npm:*":
   version: 2.0.4
   resolution: "@types/http-errors@npm:2.0.4"
@@ -5257,6 +5264,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-truncate@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "html-truncate@npm:1.2.2"
+  checksum: 10c0/cb40e11e2044668a3b358344dbb9c98e5463372887777e9930993c307e7577198885bbea70036b41e9f293b075d710bc8e98596ee036f5ec6cb91100a8f1736a
+  languageName: node
+  linkType: hard
+
 "html-webpack-plugin@npm:^5.1.0, html-webpack-plugin@npm:^5.5.0":
   version: 5.6.3
   resolution: "html-webpack-plugin@npm:5.6.3"
@@ -8612,6 +8626,7 @@ __metadata:
     "@babel/preset-env": "npm:^7.20.2"
     "@babel/runtime": "npm:^7.20.7"
     "@heroicons/vue": "npm:^2.0.18"
+    "@types/html-truncate": "npm:^1"
     "@types/webpack-env": "npm:^1.18.0"
     "@typescript-eslint/eslint-plugin": "npm:^5.47.0"
     "@typescript-eslint/parser": "npm:^5.47.0"
@@ -8636,6 +8651,7 @@ __metadata:
     eslint-webpack-plugin: "npm:^3.2.0"
     express: "npm:^4.18.2"
     helmet: "npm:^7.0.0"
+    html-truncate: "npm:^1.2.2"
     html-webpack-plugin: "npm:^5.5.0"
     mini-css-extract-plugin: "npm:^2.7.2"
     moment: "npm:^2.29.4"
