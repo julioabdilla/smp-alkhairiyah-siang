@@ -56,4 +56,13 @@ export default defineComponent({
   list-style: decimal !important;
   padding-left: 1.5rem;
 }
+
+::v-deep(.article-content a) {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+::v-deep(.article-content a:hover) {
+  text-decoration: underline;
+}
 </style>
