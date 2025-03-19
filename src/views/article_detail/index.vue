@@ -2,7 +2,7 @@
   <div class="news text-left w-full flex flex-col">
     <span class="text-2xl font-semibold">{{ article.title }}</span>
     <span class="text-xs text-gray-500">{{ article.published_at }}</span><span v-if="article.created_by"> &middot; oleh: {{ article.created_by }}</span>
-    <div class="text-wrap text-sm mt-2" v-html="article.content"></div>
+    <div class="article-content text-wrap text-sm mt-2" v-html="article.content"></div>
   </div>
 </template>
 
@@ -45,3 +45,15 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+::v-deep(.article-content ul) {
+  list-style: disc !important;
+  padding-left: 1.5rem;
+}
+
+::v-deep(.article-content ol) {
+  list-style: decimal !important;
+  padding-left: 1.5rem;
+}
+</style>

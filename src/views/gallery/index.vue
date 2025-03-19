@@ -25,7 +25,6 @@
 <script>
 import axios from 'axios'
 import { defineComponent } from 'vue'
-import { useLoadingStore } from "../../stores/loading";
 import PhotoGrid from '@/components/photogrid/PhotoGrid.vue'
 import Paging from '@/components/paging/Paging.vue'
 

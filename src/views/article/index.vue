@@ -2,11 +2,13 @@
   <div class="news text-left w-full">
     <div v-for="article in articles" :key="article.id">
       <div class="flex cursor-pointer" @click="goToDetail(article.id)">
-        <img :src="getFirstImageSrc(article.content)" class="w-48 h-28 object-cover aspect-video" />
-        <div class="flex flex-col ml-4 py-1">
-          <span class="text-xs text-gray-500">{{ article.created_at }}</span><span v-if="article.created_by"> &middot; oleh: {{ article.created_by }}</span>
+        <img v-if="getFirstImageSrc(article.content)" :src="getFirstImageSrc(article.content)" class="w-48 h-28 object-cover aspect-video mr-4" />
+        <div class="flex flex-col py-1">
+          <div class="flex items-center text-center">
+            <span class="text-xs text-gray-500">Diterbitkan {{ article.published_at }}</span><span v-if="article.created_by" class="text-xs text-gray-500 ml-1">oleh {{ article.created_by }}</span>
+          </div>
           <span class="text-lg font-bold">{{ article.title }}</span>
-          <div class="text-wrap text-sm brief-content" v-html="getBriefContent(article.content)"></div>
+          <div class="text-wrap text-sm brief-content leading-tight mt-1" v-html="getBriefContent(article.content)"></div>
           <!-- <a v-if="isContentTruncated(article.content)" @click="goToDetail(article.id)" class="text-blue-500 hover:text-blue-700 cursor-pointer text-sm">lihat selengkapnya</a> -->
         </div>
       </div>
@@ -39,7 +41,8 @@ export default defineComponent({
     return {
       articles: [],
       currentPage: 1,
-      totalPages: 1
+      totalPages: 1,
+      perPage: 10
     }
   },
   async mounted() {
@@ -58,14 +61,14 @@ export default defineComponent({
         this.totalPages = parseInt(response.headers.get('x-total-page'))
         this.articles = response.data.map(article => {
           let format = 'DD MMMM';
-          if (!moment().isSame(moment(article.created_at), 'year')) {
+          if (!moment().isSame(moment(article.published_at), 'year')) {
             format = 'DD MMM YYYY'
           }
           return {
             id: article.id,
             title: article.title,
-            content: this.getBriefContent(article.content),
-            created_at: moment(article.created_at).format(format),
+            content: article.content,
+            published_at: moment(article.published_at).format(format),
             created_by: article.created_by,
           }
         })
@@ -85,7 +88,8 @@ export default defineComponent({
     },
     getFirstImageSrc(content) {
       const imgTagMatch = content.match(/<img[^>]+src="([^">]+)"/)
-      return imgTagMatch ? imgTagMatch[1] : require('@/assets/images/image-placeholder.jpg')
+      // return imgTagMatch ? imgTagMatch[1] : require('@/assets/images/image-placeholder.jpg')
+      return imgTagMatch ? imgTagMatch[1] : null
     },
     changePage(page) {
       this.currentPage = page;
