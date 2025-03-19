@@ -59,7 +59,7 @@ export default defineComponent({
           },
         })
         this.totalPages = parseInt(response.headers.get('x-total-page'))
-        this.galleries = response.data.map(gallery => {
+        this.galleries = response.data.filter(gallery => gallery.items.length > 0).map(gallery => {
           return {
             ...gallery,
             items: gallery.items.map(item => {
