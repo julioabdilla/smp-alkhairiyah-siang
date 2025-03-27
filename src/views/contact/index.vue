@@ -21,6 +21,6 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Kontak',
+  name: 'Contact',
 })
 </script>

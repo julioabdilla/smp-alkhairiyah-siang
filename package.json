@@ -18,6 +18,7 @@
     "core-js": "^3.27.0",
     "express": "^4.18.2",
     "helmet": "^7.0.0",
+    "html-truncate": "^1.2.2",
     "moment": "^2.29.4",
     "path": "^0.12.7",
     "pinia": "^2.0.28",
@@ -29,9 +30,11 @@
     "@babel/core": "^7.20.7",
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
+    "@types/html-truncate": "^1",
     "@types/webpack-env": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.47.0",
     "@typescript-eslint/parser": "^5.47.0",
+    "@vue/cli-service": "^5.0.8",
     "@vue/compiler-sfc": "^3.2.45",
     "autoprefixer": "9",
     "babel-loader": "^9.1.0",
@@ -55,8 +58,8 @@
     "postcss-loader": "^7.0.2",
     "prettier": "2.8.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.57.1",
-    "sass-loader": "^13.2.0",
+    "sass": "^1.85.0",
+    "sass-loader": "^16.0.5",
     "strip-ansi": "^6.0.0",
     "style-loader": "^3.3.1",
     "stylelint": "^14.16.0",
@@ -79,5 +82,5 @@
   "engines": {
     "node": ">=14.15.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@4.5.0"
 }
