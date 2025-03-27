@@ -1,9 +1,10 @@
-const port = process.env.PORT || 8080
-
+require('dotenv').config();
 const express = require('express') 
 const path = require('path');
 const helmet = require('helmet');
 const compress = require('compression');
+
+const port = process.env.PORT || 8080
 
 const app = express() 
 app.use(compress());
