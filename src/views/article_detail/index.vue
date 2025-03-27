@@ -1,7 +1,7 @@
 <template>
   <div class="news text-left w-full flex flex-col">
     <span class="text-2xl font-semibold">{{ article.title }}</span>
-    <span class="text-xs text-gray-500">{{ article.published_at }}</span><span v-if="article.created_by"> &middot; oleh: {{ article.created_by }}</span>
+    <span class="text-xs text-gray-500">Diterbitkan {{ article.published_at }}</span><span v-if="article.created_by"> &middot; oleh: {{ article.created_by }}</span>
     <div class="article-content text-wrap text-sm mt-2" v-html="article.content"></div>
   </div>
 </template>
@@ -36,7 +36,11 @@ export default defineComponent({
         const { data: article } = await axios.get(`${process.env.VUE_APP_API_BASE_URL}/article/${this.$route.params.articleId}`)
         this.article = article;
         if (this.article.published_at) {
-          this.article.published_at = moment(this.article.published_at).format('DD MMMM YYYY, HH:mm')
+          let format = 'DD MMMM, HH:mm'
+          if (!moment().isSame(moment(this.article.published_at), 'year')) {
+            format = 'DD MMM YYYY, HH:mm'
+          }
+          this.article.published_at = moment(this.article.published_at).format(format)
         }
       } catch (e) {
         console.error(e)

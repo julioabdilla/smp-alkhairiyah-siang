@@ -60,9 +60,9 @@ export default defineComponent({
         })
         this.totalPages = parseInt(response.headers.get('x-total-page'))
         this.articles = response.data.map(article => {
-          let format = 'DD MMMM';
+          let format = 'DD MMMM, HH:mm';
           if (!moment().isSame(moment(article.published_at), 'year')) {
-            format = 'DD MMM YYYY'
+            format = 'DD MMM YYYY, HH:mm'
           }
           return {
             id: article.id,
