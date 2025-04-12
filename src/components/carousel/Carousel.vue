@@ -15,7 +15,7 @@ export default {
     return {
       currentImage: 0,
       images: [
-        'banner1.jpg',
+        'banner3.jpeg',
       ],
     };
   },

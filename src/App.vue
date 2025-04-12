@@ -64,6 +64,13 @@
             </div>
             <div class="text-sm mt-4">
               <div class="flex items-center">
+                <chat-bubble-oval-left-icon class="w-3 h-auto mr-1 mb-0.5" />
+                <span class="font-semibold">Whatsapp:</span>
+              </div>
+              <p>085211275433</p>
+            </div>
+            <div class="text-sm mt-4">
+              <div class="flex items-center">
                 <envelope-icon class="w-3 h-auto mr-1 mb-0.5" />
                 <span class="font-semibold">Email:</span>
               </div>
@@ -153,7 +160,7 @@ import Loading from './components/loading/Loading.vue'
 import Carousel from './components/carousel/Carousel.vue'
 import GoogleMap from './components/googlemap/GoogleMap.vue'
 import Calendar from './components/calendar/Calendar.vue'
-import { MapPinIcon, PhoneIcon, EnvelopeIcon, HomeIcon } from '@heroicons/vue/24/solid'
+import { MapPinIcon, PhoneIcon, EnvelopeIcon, HomeIcon, ChatBubbleOvalLeftIcon } from '@heroicons/vue/24/solid'
 import FacebookIcon from '@/assets/images/icons8-facebook.svg'
 import InstagramIcon from '@/assets/images/icons8-instagram.svg'
 import TitkokIcon from '@/assets/images/icons8-tiktok.svg'
@@ -173,6 +180,7 @@ export default {
     InstagramIcon,
     TitkokIcon,
     YoutubeIcon,
+    ChatBubbleOvalLeftIcon
   },
   setup() {
     const loadingStore = useLoadingStore();
